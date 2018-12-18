@@ -1,0 +1,6 @@
+10:48:58,214 DEBUG devpinoyLogger:37 - Config file Loaded
+10:49:03,973 DEBUG devpinoyLogger:55 - Chrome browser launched
+10:49:05,207 DEBUG devpinoyLogger:59 - Browser Maximized and Testsite is loaded
+10:49:17,153 DEBUG devpinoyLogger:21 - Launching browser and routing to Website test passed
+10:49:20,378 DEBUG devpinoyLogger:31 - Search element testcase passed successfully.
+10:49:24,319 DEBUG devpinoyLogger:71 - Test Suite execution complete.

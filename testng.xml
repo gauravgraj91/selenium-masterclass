@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Masterclass Practice">
+
+    <listeners>
+        <listener class-name="com.selenium.masterclass.seleniummasterclass.listeners.CustomListeners" />
+    </listeners>
+
+    <test name="Website Login Tests">
+        <classes>
+            <class name="com.selenium.masterclass.seleniummasterclass.LoginTests" />
+        </classes>
+    </test>
+</suite>

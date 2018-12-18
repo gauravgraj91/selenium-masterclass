@@ -1,5 +1,0 @@
-22:38:38,495 DEBUG devpinoyLogger:35 - Config file Loaded
-22:38:42,836 DEBUG devpinoyLogger:51 - Chrome browser launched
-22:38:44,203 DEBUG devpinoyLogger:55 - Browser Maximized and Testsite is loaded
-22:38:54,025 DEBUG devpinoyLogger:24 - The first test case passed successfully.
-22:38:57,928 DEBUG devpinoyLogger:66 - Test Suite execution complete.

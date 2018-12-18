@@ -1,5 +1,10 @@
 package com.selenium.masterclass.seleniummasterclass;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.selenium.masterclass.seleniummasterclass.Utilities.ExtentManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,6 +23,8 @@ public class TestBase {
     public static Properties config = new Properties();
     public static FileInputStream fis;
     public static Logger log = Logger.getLogger("devpinoyLogger");
+    public ExtentReports rep = ExtentManager.getInstance();
+    public static ExtentTest test;
 
     @BeforeSuite
     public void setUp(){
@@ -39,14 +46,14 @@ public class TestBase {
 
             if (config.getProperty("browser").equals("firefox")) {
 
-                System.setProperty("webdriver.gecko.driver", "\\src\\main\\resources\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "\\src\\main\\resources\\executables\\geckodriver.exe");
                 driver = new FirefoxDriver();
                 log.debug("Firefox browser launched");
 
             } else if (config.getProperty("browser").equals("chrome")) {
 
                 System.setProperty("webdriver.chrome.driver",
-                        System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe");
+                        System.getProperty("user.dir") + "\\src\\main\\resources\\executables\\chromedriver.exe");
                 driver = new ChromeDriver();
                 log.debug("Chrome browser launched");
             }
@@ -55,6 +62,15 @@ public class TestBase {
             log.debug("Browser Maximized and Testsite is loaded");
             driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),
                     TimeUnit.SECONDS);
+        }
+    }
+
+    public boolean isElementPresent(By by){
+        try {
+            driver.findElement(by);
+            return true;
+        }catch (NoSuchElementException e){
+            return false;
         }
     }
 
