@@ -1,6 +1,16 @@
-10:48:58,214 DEBUG devpinoyLogger:37 - Config file Loaded
-10:49:03,973 DEBUG devpinoyLogger:55 - Chrome browser launched
-10:49:05,207 DEBUG devpinoyLogger:59 - Browser Maximized and Testsite is loaded
-10:49:17,153 DEBUG devpinoyLogger:21 - Launching browser and routing to Website test passed
-10:49:20,378 DEBUG devpinoyLogger:31 - Search element testcase passed successfully.
-10:49:24,319 DEBUG devpinoyLogger:71 - Test Suite execution complete.
+22:20:10,265 DEBUG devpinoyLogger:46 - Config file Loaded
+22:20:14,677 DEBUG devpinoyLogger:62 - Chrome browser launched
+22:20:16,052 DEBUG devpinoyLogger:66 - Browser Maximized and Testsite is loaded
+22:20:31,003 DEBUG devpinoyLogger:24 - Launching browser and routing to Website test passed
+22:20:31,058 DEBUG cache:44 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+22:20:31,060 DEBUG cache:44 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+22:20:31,065 DEBUG cache:44 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+22:20:31,065 DEBUG cache:44 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+22:20:31,066 DEBUG cache:44 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Gaurav/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+22:20:36,213 DEBUG devpinoyLogger:34 - Search element testcase passed successfully.
+22:20:39,228 DEBUG cache:44 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+22:20:39,228 DEBUG cache:44 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+22:20:39,228 DEBUG cache:44 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+22:20:39,228 DEBUG cache:44 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+22:20:39,228 DEBUG cache:44 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Gaurav/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+22:20:41,699 DEBUG devpinoyLogger:105 - Test Suite execution complete.

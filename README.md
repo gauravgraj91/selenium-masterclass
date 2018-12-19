@@ -1,5 +1,11 @@
-# selenium-masterclass
+# Selenium-Masterclass
 Practicing selenium framework modules.
+
+# Modules Implemented
+
+* Log4j
+* Extent Reports
+* Custom Listeners
 
 # Local Repo
 cd ../../..

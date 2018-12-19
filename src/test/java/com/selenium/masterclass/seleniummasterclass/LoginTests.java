@@ -1,5 +1,6 @@
 package com.selenium.masterclass.seleniummasterclass;
 
+import com.selenium.masterclass.seleniummasterclass.Base.TestBase;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -17,8 +18,9 @@ public class LoginTests extends TestBase {
         WebElement explorePrimeBtn = driver.findElement(By.xpath("//a[@class='nav-sprite nav-logo-tagline nav-prime-try']"));
         Assert.assertTrue(isElementPresent(By.xpath("//a[@class='nav-sprite nav-logo-tagline nav-prime-try']")));
         explorePrimeBtn.click();
-        WebElement homeBtn = driver.findElement(By.xpath("//span[@class='nav-sprite nav-logo-base']"));
-        homeBtn.click();
+        /*WebElement homeBtn = driver.findElement(By.xpath("//span[@class='nav-sprite nav-logo-base']"));
+        homeBtn.click();*/
+        click("//span[@class='nav-sprite nav-logo-base']");
         log.debug("Launching browser and routing to Website test passed");
     }
 

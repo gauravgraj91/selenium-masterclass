@@ -1,21 +1,24 @@
-package com.selenium.masterclass.seleniummasterclass;
+package com.selenium.masterclass.seleniummasterclass.Base;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.selenium.masterclass.seleniummasterclass.Utilities.ExtentManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
 
 public class TestBase {
 
@@ -23,11 +26,12 @@ public class TestBase {
     public static Properties config = new Properties();
     public static FileInputStream fis;
     public static Logger log = Logger.getLogger("devpinoyLogger");
-    public ExtentReports rep = ExtentManager.getInstance();
     public static ExtentTest test;
+    public static WebElement dropdown;
+    public ExtentReports rep = ExtentManager.getInstance();
 
     @BeforeSuite
-    public void setUp(){
+    public void setUp() {
 
         if (driver == null) {
 
@@ -65,11 +69,30 @@ public class TestBase {
         }
     }
 
-    public boolean isElementPresent(By by){
+    //Defining actions on Elements.
+
+    public void click(String locator) {
+        driver.findElement(By.xpath(locator)).click();
+        test.log(LogStatus.INFO, "Clicking on the button" + locator);
+    }
+
+    public void type(String locator, String value) {
+        driver.findElement(By.xpath(locator)).sendKeys(value);
+        test.log(LogStatus.INFO, "Typing in : " + locator + " entered value as " + value);
+    }
+
+    public void select(String locator, String value) {
+        dropdown = driver.findElement(By.xpath(locator));
+        test.log(LogStatus.INFO, "Selecting from dropdown : " + locator + " value as " + value);
+    }
+
+    //Verifying the presence of an Element.
+
+    public boolean isElementPresent(By by) {
         try {
             driver.findElement(by);
             return true;
-        }catch (NoSuchElementException e){
+        } catch (NoSuchElementException e) {
             return false;
         }
     }

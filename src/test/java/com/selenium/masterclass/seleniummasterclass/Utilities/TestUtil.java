@@ -1,6 +1,6 @@
 package com.selenium.masterclass.seleniummasterclass.Utilities;
 
-import com.selenium.masterclass.seleniummasterclass.TestBase;
+import com.selenium.masterclass.seleniummasterclass.Base.TestBase;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
