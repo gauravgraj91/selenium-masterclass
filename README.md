@@ -3,9 +3,10 @@ Practicing selenium framework modules.
 
 # Modules Implemented
 
-* Log4j
+* Log4j integration
 * Extent Reports
-* Custom Listeners
+* Custom Listeners for Test cases logs.
+* Excel Integration with Read and Write capabilities.
 
 # Local Repo
 cd ../../..
